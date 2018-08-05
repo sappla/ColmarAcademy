@@ -7,7 +7,7 @@
 /* -- UNIVERSAL STYLES -- */
 html {
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: black;
 
@@ -21,6 +21,7 @@ html {
 .content-wrapper {
   max-width: 1200px;
   margin: 0 auto; /* to center container into browser window */
+  padding: 0 1rem;
 }
 
 .left {
@@ -28,7 +29,7 @@ html {
   max-width: 60%;
   padding: 2rem 1.5rem;
 
-  background-color: yellow;
+  /border: 2px dotted red;
 }
 
 .right {
@@ -36,7 +37,7 @@ html {
   max-width: 40%;
   padding: 2rem 1.5rem;
 
-  background-color: green;
+  /border: 2px dotted green;
 }
 
 
@@ -69,7 +70,16 @@ html {
 .exhibit-section,
 .footer-section {
   position: relative;
-  top: 4rem; /* Offset sections to account for fixed header */
+  top: 5rem; /* Offset sections to account for fixed header */
+
+}
+
+.tile-wrapper {
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),
+    0 0 0 1px rgba(0,0,0,0.08);
 }
 
 /* -- HEADER -- */
@@ -105,6 +115,7 @@ html {
 }
 
 .brand-name {
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -179,7 +190,6 @@ html {
 
 /* -- BANNER -- */
 .banner-container {
-  background-color: white;
   align-items: center;
 }
 
@@ -198,7 +208,6 @@ html {
 .banner-cta h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: .15rem;
   line-height: 2.75rem;
   margin-bottom: 2rem;
 }
@@ -245,13 +254,33 @@ html {
 
 /* -- INFORMATION -- */
 .information-container {
-  background-color: white;
   align-items: flex-start;
 }
 
 #info-img {
   max-height: 100%;
   width: auto;
+}
+
+.motivational-text {
+  margin-top: 2rem;
+}
+
+.motivational-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.motivational-text p {
+  font-size: 1.125rem;
+  color: rgb(120 120 120);
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .events-container {
@@ -261,32 +290,80 @@ html {
 .event {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgb(120 120 120);
+}
 
+.event-wrapper::after {
+  content: "";
+  display: block;
+  width: 35%;
+  height: 1.25px;
+  margin: 1rem auto 1rem 0;
+  background-color: rgb(120 120 120);
+  transition: width 300ms ease-in 0s;
+}
+
+.event-wrapper:hover::after {
+  width: 100%;
+  background-color: black;
+  transition: width 300ms ease-out 0s;
+}
+
+.event:hover {
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),
+    0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.event:first-of-type {
+  padding-top: 0;
 }
 
 .event .img-container {
   width: 35%;
-
 }
 
 .event-info {
   width: 65%;
   padding-left: 1rem;
-
+  padding-right: 0.5rem;
 }
 
 .event-info h4 {
-
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .event-info p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(120 120 120);
+  margin-bottom: 1rem;
 
 }
 
 .event-info a {
+  text-decoration: none;
+  font-weight: 400;
+  color: rgb(38 121 232);
+}
 
+.event-info a:hover {
+  color: rgb(32 100 191);
+}
+
+.all-events-btn {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  color: black;
+  opacity: .9;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+a.all-events-btn {
+  text-decoration: none;
 }
 
 
