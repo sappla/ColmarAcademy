@@ -23,6 +23,24 @@ html {
   margin: 0 auto; /* to center container into browser window */
 }
 
+.left {
+  flex-basis: 60%;
+  max-width: 60%;
+  padding: 2rem 1.5rem;
+
+  background-color: yellow;
+}
+
+.right {
+  flex-basis: 40%;
+  max-width: 40%;
+  padding: 2rem 1.5rem;
+
+  background-color: green;
+}
+
+
+
 @media only screen and (max-width: 960px) {
   .container {
     width: 100%;
@@ -46,12 +64,12 @@ html {
 }
 
 .banner-section,
-.calendar-section,
+.information-section,
 .catalogue-section,
 .exhibit-section,
 .footer-section {
   position: relative;
-  top: 4rem;
+  top: 4rem; /* Offset sections to account for fixed header */
 }
 
 /* -- HEADER -- */
@@ -93,7 +111,6 @@ html {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  /transition: display 400ms ease-out 25ms;
 }
 
 .brand-name span {
@@ -108,13 +125,10 @@ html {
 
 .nav-desktop {
   height: inherit;
-
 }
 
 .nav-desktop ul {
   height: inherit;
-
-
 }
 
 .nav-desktop ul li {
@@ -166,22 +180,16 @@ html {
 /* -- BANNER -- */
 .banner-container {
   background-color: white;
-  padding: 2rem;
   align-items: center;
 }
 
-.banner-container .img-container {
-  flex-basis: 60%;
-  max-width: 60%;
-}
-
-.banner-container img {
+#banner-img {
   max-height: 100%;
   width: auto;
 }
 
 .banner-cta {
-  margin: 1rem 0 1rem 3rem;
+  margin: 1rem 0;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
@@ -193,7 +201,6 @@ html {
   letter-spacing: .15rem;
   line-height: 2.75rem;
   margin-bottom: 2rem;
-  white-space: nowrap;
 }
 
 .banner-cta h3 {
@@ -236,7 +243,51 @@ html {
 
 
 
-/* -- CALENDAR -- */
+/* -- INFORMATION -- */
+.information-container {
+  background-color: white;
+  align-items: flex-start;
+}
+
+#info-img {
+  max-height: 100%;
+  width: auto;
+}
+
+.events-container {
+  flex-direction: column;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(120 120 120);
+
+}
+
+.event .img-container {
+  width: 35%;
+
+}
+
+.event-info {
+  width: 65%;
+  padding-left: 1rem;
+
+}
+
+.event-info h4 {
+
+}
+
+.event-info p {
+
+}
+
+.event-info a {
+
+}
 
 
 /* -- CATALOGUE -- */
