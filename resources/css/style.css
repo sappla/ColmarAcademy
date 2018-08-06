@@ -29,7 +29,7 @@ html {
   max-width: 60%;
   padding: 2rem 1.5rem;
 
-  /border: 2px dotted red;
+  border: 2px dotted red;
 }
 
 .right {
@@ -37,9 +37,16 @@ html {
   max-width: 40%;
   padding: 2rem 1.5rem;
 
-  /border: 2px dotted green;
+  border: 2px dotted green;
 }
 
+.full {
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 2rem 1.5rem;
+
+  border: 2px dotted blue;
+}
 
 
 @media only screen and (max-width: 960px) {
@@ -71,15 +78,63 @@ html {
 .footer-section {
   position: relative;
   top: 5rem; /* Offset sections to account for fixed header */
-
 }
 
 .tile-wrapper {
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),
     0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.copy-block {
+  margin-top: 2rem;
+}
+
+.copy-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.copy-quote {
+  font-size: 1.125rem;
+  color: rgb(120 120 120);
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.tile-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.all-btn {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  color: black;
+  opacity: .9;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+a.all-btn {
+  text-decoration: none;
 }
 
 /* -- HEADER -- */
@@ -262,27 +317,6 @@ html {
   width: auto;
 }
 
-.motivational-text {
-  margin-top: 2rem;
-}
-
-.motivational-text h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.motivational-text p {
-  font-size: 1.125rem;
-  color: rgb(120 120 120);
-  margin-bottom: 1rem;
-}
-
-.quote-author {
-  font-size: 1rem;
-  font-style: italic;
-}
-
 .events-container {
   flex-direction: column;
 }
@@ -351,7 +385,88 @@ html {
   color: rgb(32 100 191);
 }
 
-.all-events-btn {
+
+/* -- CATALOGUE -- */
+.catalogue-section .full {
+  padding: 1rem 1.5rem;
+}
+
+.catalogue-container {
+  padding: 0 1.5rem;
+  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.catalogue-container .tile-wrapper {
+  flex-basis: 25%;
+  max-width: 25%;
+  margin: 1rem 0.75rem;
+  transition: transform 250ms ease-in-out 0ms;
+
+}
+
+a.major {
+  text-decoration: none;
+}
+
+a.major:visited {
+  color: inherit;
+}
+
+.major {
+  border-radius: 0 0 0.5rem 0.5rem;
+
+
+
+  /display: flex;
+  /flex-direction: column;
+}
+
+.major:hover {
+  background-color: whitesmoke;
+  transition: background-color 200ms ease-out 175ms;
+
+
+  box-shadow: 0px 3px 25px 3px rgba(0,0,0,0.2);
+}
+
+.catalogue-container .tile-wrapper:hover {
+  transform: translateY(-0.5rem);
+  transition: transform 250ms ease-in-out 100ms;
+}
+
+
+.major .img-container {
+  width: 100%;
+}
+
+.major-info {
+  padding: 1.5rem;
+}
+
+.major-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.major-subtitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(120 120 120);
+  margin-bottom: 0.5rem;
+
+}
+
+.major-courses {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(120 120 120);
+}
+
+.all-btn {
   margin-top: 0.5rem;
   font-size: 1rem;
   background-color: whitesmoke;
@@ -362,13 +477,9 @@ html {
   text-align: center;
 }
 
-a.all-events-btn {
+a.all-btn {
   text-decoration: none;
 }
-
-
-/* -- CATALOGUE -- */
-
 
 /* -- EXHIBIT -- */
 
