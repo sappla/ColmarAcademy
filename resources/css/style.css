@@ -29,7 +29,7 @@ html {
   max-width: 60%;
   padding: 2rem 1.5rem;
 
-  border: 2px dotted red;
+  /border: 2px dotted red;
 }
 
 .right {
@@ -37,7 +37,7 @@ html {
   max-width: 40%;
   padding: 2rem 1.5rem;
 
-  border: 2px dotted green;
+  /border: 2px dotted green;
 }
 
 .full {
@@ -45,7 +45,7 @@ html {
   max-width: 100%;
   padding: 2rem 1.5rem;
 
-  border: 2px dotted blue;
+  /border: 2px dotted blue;
 }
 
 
@@ -391,6 +391,10 @@ a.all-btn {
   padding: 1rem 1.5rem;
 }
 
+.catalogue-section .tile-wrapper {
+  padding-bottom: 1rem;
+}
+
 .catalogue-container {
   padding: 0 1.5rem;
   justify-content: space-around;
@@ -466,20 +470,42 @@ a.major:visited {
   color: rgb(120 120 120);
 }
 
-.all-btn {
-  margin-top: 0.5rem;
+/*
+.catalogue-section .full::after {
+  display: block;
+  margin: 2rem auto 0 auto;
+  content: "";
+  height: 1px;
+  width: 90%;
+  background-color: rgb(120 120 120);
+}
+*/
+
+/*
+#catalogue-all-btn:before {
+  display: block;
+  margin: 0.5rem auto 1rem auto;
+  content: "";
+  height: 1px;
+  width: 90%;
+  background-color: rgb(120 120 120);
+}
+*/
+
+#catalogue-all-btn {
+  justify-content: center;
   font-size: 1rem;
-  background-color: whitesmoke;
   color: black;
-  opacity: .9;
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
+  margin: 1rem auto;
 }
 
-a.all-btn {
+#catalogue-all-btn a {
   text-decoration: none;
+  text-align: center;
+  width: 30%;
+  margin: 0;
 }
+
 
 /* -- EXHIBIT -- */
 
