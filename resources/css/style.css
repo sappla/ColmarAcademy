@@ -1,6 +1,24 @@
 /* -- XXX -- */
 /* XXX */
 
+/* -- UNIVERSAL STYLES --      */
+/*  | Containers               */
+
+/* -- TYPOGRAPHY STYLES I --   */
+/*  | Promo                    */
+/*  | Sections                 */
+/*  | Informational            */
+/*  | Featured elements        */
+/*  | Catalogue tiles          */
+/*  | Exhibits description     */
+
+/* -- MARGINS & COLORS     --  */
+/*  | Promo                    */
+/*  | Sections                 */
+/*  | Informational            */
+/*  | Featured elements        */
+/*  | Catalogue tiles          */
+/*  | Exhibits description     */
 
 
 
@@ -18,39 +36,14 @@ html {
   box-sizing: inherit;
 }
 
+/* Containers */
 .content-wrapper {
   max-width: 1200px;
   margin: 0 auto; /* to center container into browser window */
   padding: 0 1rem;
 }
-
-.left {
-  flex-basis: 60%;
-  max-width: 60%;
-  padding: 2rem 1.5rem;
-
-  /border: 2px dotted red;
-}
-
-.right {
-  flex-basis: 40%;
-  max-width: 40%;
-  padding: 2rem 1.5rem;
-
-  /border: 2px dotted green;
-}
-
-.full {
-  flex-basis: 100%;
-  max-width: 100%;
-  padding: 2rem 1.5rem;
-
-  /border: 2px dotted blue;
-}
-
-
 @media only screen and (max-width: 960px) {
-  .container {
+  .content-wrapper {
     width: 100%;
   }
 }
@@ -59,10 +52,136 @@ html {
   display: flex;
 }
 
+.left {
+  flex-basis: 60%;
+  max-width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.right {
+  flex-basis: 40%;
+  max-width: 40%;
+  padding: 2rem 1.5rem;
+}
+
+.full {
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 2rem 1.5rem;
+}
+
 .img-container {
   overflow: hidden;
   background-color: color: rgb(120 120 120);
 }
+
+.video-container {
+  overflow: hidden;
+  background-color: color: rgb(100 100 100);
+}
+
+
+
+/* -- TYPOGRAPHY STYLES -- */
+
+/* Promo */
+h1.promo-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+p.promo-copy {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Sections */
+h2.section-title {
+  font-size: 2.125rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Informational */
+h3.copy-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+p.copy {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: rgb(120 120 120);
+}
+aside.copy-author {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Featured elements */
+h4.feat-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+p.feat-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(120 120 120);
+}
+a.feat-link {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* Catalogue tiles */
+h3.major-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+h4.major-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+}
+p.major-courses {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Exhibits description */
+h3.description-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+p.description {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: rgb(120 120 120);
+}
+
+
+
+/* -- MARGINS --  */
+.copy-block,
+.description-block {
+  margin-top: 2rem;
+}
+
+.copy-title,
+.copy,
+.description-title,
+.description,
+.feat-title,
+.feat-subtitle {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
 
 .img-container img {
   max-width: 100%;
@@ -71,10 +190,7 @@ html {
   vertical-align: middle;
 }
 
-.video-container {
-  overflow: hidden;
-  background-color: color: rgb(100 100 100);
-}
+
 
 .video-container video {
   max-width: 100%;
@@ -106,39 +222,23 @@ html {
   background-color: rgb(235 235 235);
 }
 
-.copy-block {
-  margin-top: 2rem;
-}
 
-.copy-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
 
-.section-title {
+
+
+/*
+.XXXXsection-title {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
+*/
+.section-title {
 
-.copy-quote {
-  font-size: 1.125rem;
-  color: rgb(120 120 120);
-  margin-bottom: 1rem;
-}
 
-.quote-author {
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.content-title {
-  font-size: 2.125rem;
-  font-weight: 900;
-  text-align: center;
   padding-top: 2rem;
 }
+
 
 .cta-btn {
   font-size: 1.125rem;
@@ -183,22 +283,11 @@ a.cta-btn:hover {
   padding-right: 0.5rem;
 }
 
-.feat-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
 
-.feat-subtitle {
-  font-size: 1rem;
-  font-weight: 400;
-  color: rgb(120 120 120);
-  margin-bottom: 1rem;
-}
 
 a.feat-link {
   text-decoration: none;
-  font-weight: 400;
+
   color: rgb(38 121 232);
 }
 
@@ -225,16 +314,13 @@ a.feat-link:hover {
 
 .feat:hover {
   background-color: rgb(235 235 235);
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0.75rem 0.75rem 0;
   transition: width 200ms ease-out 100ms,
     border-radius 300ms ease-out 0s;
 
 
 
-/*
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),
-    0 0 0 1px rgba(0,0,0,0.08);
-    */
+
 }
 
 
@@ -357,16 +443,12 @@ a.feat-link:hover {
 }
 
 .banner-cta h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 2.75rem;
+  /line-height: 2.75rem;
   margin-bottom: 2rem;
 }
 
-.banner-cta h3 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 2rem;
+.banner-cta p {
+  /line-height: 2rem;
   margin-bottom: 3rem;
 }
 
@@ -375,7 +457,7 @@ a.feat-link:hover {
     font-size: 4.1vw;
   }
 
-  .banner-cta h3 {
+  .banner-cta p {
     font-size: 2.5vw;
   }
 }
@@ -415,7 +497,6 @@ a.feat-link:hover {
 
 .tile-wrapper {
   background-color: white;
-  border-radius: 0.5rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),
     0 0 0 1px rgba(0,0,0,0.08);
@@ -425,10 +506,11 @@ a.feat-link:hover {
   flex-basis: 25%;
   max-width: 25%;
   margin: 1rem 0.75rem;
-  transition: transform 250ms ease-in-out 0ms;
+  transition: all 250ms ease-in-out 0ms;
 }
 
 .catalogue-container .tile-wrapper:hover {
+  border-radius: 0.75rem;
   transform: translateY(-0.5rem);
   transition: all 250ms ease-in-out 100ms;
   box-shadow: 0px 3px 25px 3px rgba(0,0,0,0.2);
@@ -439,7 +521,7 @@ a.major {
 }
 
 a.major:visited {
-  color: inherit;
+  color: black;
 }
 
 .major {
@@ -448,7 +530,6 @@ a.major:visited {
 
 .major .img-container {
   width: 100%;
-  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .major-info {
@@ -456,22 +537,19 @@ a.major:visited {
 }
 
 .major-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+
   margin-bottom: 1rem;
 }
 
 .major-subtitle {
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 400;
+
   color: rgb(120 120 120);
   margin-bottom: 0.5rem;
 }
 
 .major-courses {
-  font-size: 1rem;
-  font-weight: 400;
+
   color: rgb(120 120 120);
 }
 
