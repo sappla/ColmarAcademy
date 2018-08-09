@@ -13,12 +13,10 @@
 /*  | Exhibits description     */
 
 /* -- MARGINS & COLORS     --  */
-/*  | Promo                    */
-/*  | Sections                 */
-/*  | Informational            */
-/*  | Featured elements        */
-/*  | Catalogue tiles          */
-/*  | Exhibits description     */
+
+
+
+
 
 
 
@@ -344,12 +342,16 @@ a.feat-link:hover {
   padding: 0 1.5rem;
 }
 
-.logo {
+.logo-desktop {
   padding-right: 2.5rem;
   flex-grow: 1;
 }
 
-.logo .img-container {
+.logo-desktop a {
+  color: inherit;
+}
+
+.logo-desktop .img-container {
   min-width: 1.6875rem;
   min-height: 2rem;
   display: inline-block;
@@ -421,8 +423,25 @@ a.feat-link:hover {
   color: rgb(120 120 120);
 }
 
+
 .nav-mobile {
   display: none;
+}
+@media only screen and (max-width: 640px) {
+  .nav-desktop,
+  .logo-desktop {
+    display: none;
+  }
+  .nav-mobile {
+    display: inline-flex;
+    flex-grow: 1;
+  }
+  .nav-mobile ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* -- BANNER -- */
