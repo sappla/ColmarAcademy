@@ -260,7 +260,7 @@ a.cta-btn:hover {
 @media only screen and (max-width: 640px) {
   #events-btn.cta-btn,
   #catalogue-btn .cta-btn,
-  #exhibits-btn.cta-btn, {
+  #exhibit-btn.cta-btn {
     background-color: inherit;
     font-size: 0.875rem;
     font-weight: 600;
@@ -273,8 +273,8 @@ a.cta-btn:hover {
   #events-btn.cta-btn:active,
   #catalogue-btn .cta-btn:hover,
   #catalogue-btn .cta-btn:active,
-  #exhibits-btn.cta-btn:hover,
-  #exhibits-btn.cta-btn:active, {
+  #exhibit-btn.cta-btn:hover,
+  #exhibit-btn.cta-btn:active {
     color: rgb(32 100 191);
   }
 }
@@ -484,6 +484,7 @@ a.feat-link:hover {
 .banner-cta h1 {
   /line-height: 2.75rem;
   margin-bottom: 2rem;
+  /white-space: nowrap;
 }
 
 .banner-cta p {
@@ -492,6 +493,126 @@ a.feat-link:hover {
 }
 
 @media only screen and (min-width: 641px) and (max-width: 940px) {
+
+  .content-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+
+  .information-container,
+  .showcase-container {
+    display: block;
+  }
+
+  #motivational-section.left-top {
+
+    max-width: none;
+    width: 100%;
+  }
+  #motivational-section.left-top .img-container {
+    display: none;
+
+  }
+  #motivational-section.left-top .copy-block {
+    flex-basis: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 2rem;
+  }
+  #motivational-section.left-top .copy-block::before,
+  #motivational-section.left-top .copy-block::after {
+    content: "quote fa";
+    color: green;
+  }
+  #motivational-section.left-top .copy-title {
+    padding-top: 0.75rem;
+  }
+  #motivational-section.left-top .copy-author {
+    padding-bottom: 0.75rem;
+  }
+
+  .information-section .right-bottom {
+    background-color: rgb(235 235 235);
+    display: block;
+    max-width: none;
+    width: 100%;
+  }
+  .feat-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .feat {
+    margin-bottom: 1rem;
+  }
+  .feat .img-container {
+    /height: 20vw;
+  }
+  .feat-wrapper {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .feat-wrapper::after {
+    content: "";
+    display: none;
+  }
+  .feat:hover {
+    background-color: inherit;
+    border-radius: 0;
+  }
+  #events-btn {
+    width: calc(50% - 6rem); /* To keep same responsive size as other buttons */
+    margin: auto 3rem;
+    height: 3.125rem;
+    align-self: center;
+  }
+  .catalogue-section {
+    background-color: whitesmoke;
+  }
+  .catalogue-container .tile-wrapper {
+    flex-basis: 25%;
+    min-width: 40%;
+  }
+
+
+
+  .exhibit-section {
+    background-color: rgb(235 235 235);
+  }
+  .showcase-container .left-top {
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .showcase-container .right-bottom {
+    display: block;
+    max-width: none;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  #exhibit-btn {
+    width: calc(50% - 6rem); /* To keep same responsive size as other buttons */
+    margin: 1rem calc(25% + 3rem) 1rem auto;
+    height: 3.125rem;
+    align-self: center;
+
+  }
+
+
+
+
+
+
+  .full {
+    display: block;
+    max-width: none;
+    width: 100%;
+  }
+
   .banner-cta h1 {
     font-size: 4.1vw;
   }
@@ -500,9 +621,14 @@ a.feat-link:hover {
     font-size: 2.5vw;
   }
 
-.header-section {
-  background-color: yellow;
-}
+  .header-section {
+    background-color: yellow;
+  }
+
+
+
+
+
 
 }
 
@@ -716,8 +842,7 @@ a.major:visited {
   .catalogue-container .tile-wrapper {
     flex-basis: 100%;
     max-width: none;
-    margin: 1rem 0.75rem;
-    transition: all 250ms ease-in-out 0ms;
+
   }
 
   .catalogue-container {
@@ -729,20 +854,25 @@ a.major:visited {
   #catalogue-btn a {
     width: 100%;
   }
-
 }
 
 /* -- EXHIBIT -- */
 
 @media only screen and (max-width: 640px) {
+  .description-block,
   #fisma,
   #campus {
     display: none;
   }
+  .showcase-container {
+    margin-top: 2rem;
+  }
 }
+
+
 /* -- FOOTER -- */
 .footer-section {
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(140 140 140);
 }
 
 .footer-section .full {
@@ -772,6 +902,16 @@ a.major:visited {
 a.nav-footer-btn {
   text-decoration: none;
   color: inherit;
+}
 
-
+@media only screen and (max-width: 640px) {
+  .footer-section {
+    border-top: none;
+  }
+  .footer-section .full {
+    padding-bottom: 1rem;
+  }
+  .nav-footer {
+    display: none;
+  }
 }
