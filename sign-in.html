@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!-- Question: when you build a multi-page website andwant to keep the same header,
+do you have to copy the same code from the index? It doesn't seem very efficent
+especially if you want to make changes after you've already created the other pages.
+Is there another way? -->
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <title>Colmar Academy - Sign in</title>
+  </head>
+  <body>
+
+    <!-- HEADER SECTION -->
+    <header class="header-section">
+      <div class="content-wrapper flex">
+          <!-- Logo -->
+          <div class="logo-desktop">
+            <a href="./index.html">
+              <div class="img-container">
+                <img src="./resources/assets/images/ic-logo.svg" alt="Colmar Academy Logo">
+              </div>
+              <p class="brand-name"><span>Colmar</span>Academy</p>
+            </a>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a class="nav-desktop-btn" href="./on-campus.html"><span>on campus</span></a></li>
+              <li><a class="nav-desktop-btn" href="./online.html">online</a></li>
+              <li><a class="nav-desktop-btn" href="./for-companies.html">for companies</a></li>
+              <li><a class="nav-desktop-btn" href="./sign-in.html">sign in</a></li>
+            </ul>
+          </nav>
+
+          <nav class="nav-mobile">
+            <ul>
+              <li><a class="nav-mobile-btn" href="./index.html">
+                <div class="img-container">
+                  <img src="./resources/assets/images/ic-logo.svg" alt="Colmar Academy Logo">
+                </div></a>
+              </li>
+              <li><a class="nav-mobile-btn" href="#on-campus">
+                <div class="img-container">
+                  <img src="./resources/assets/images/ic-on-campus.svg" alt="Desk icon">
+                </div></a>
+              </li>
+              <li><a class="nav-mobile-btn" href="#online">
+                <div class="img-container">
+                  <img src="./resources/assets/images/ic-online.svg" alt="Desktop computer icon">
+                </div></a>
+              </li>
+              <li><a class="nav-mobile-btn" href="#sign-in">
+                <div class="img-container">
+                  <img src="./resources/assets/images/ic-login.svg" alt="User icon">
+                </div></a>
+              </li>
+            </ul>
+          </nav>
+
+      </div>
+    </header>
+
+    <!-- SIGN-IN SECTION -->
+    <section class="signin-section">
+      <div class="content-wrapper">
+        <div class="signin-container flex">
+          <div class="sign-in flex">
+            <!-- Title -->
+            <div class="signin-title flex">
+              <div class="img-container">
+                <img src="./resources/assets/images/ic-logo.svg" alt="Colmar Academy Logo">
+              </div>
+              <p class="signin-subtitle">Sign in</p>
+            </div>
+            <!-- Forms -->
+            <div class="forms-container flex">
+              <!-- Username -->
+              <div class="username-container">
+                <p>Username</p>
+                <form class="username-form" action="index.html" method="post">
+
+                </form>
+
+              </div>
+              <!-- Password -->
+              <div class="password-container">
+                <p>Password</p>
+                <form class="password-form" action="index.html" method="post">
+
+                </form>
+
+              </div>
+              <!-- Button -->
+              <p class="signin-btn">Sign in!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+s
