@@ -47,6 +47,7 @@ table {
 	border-spacing: 0;
 }
 /* links */
-a, a:visited {
+a, a:visited,
+a:-webkit-any-link {
 	color: inherit;
 }
