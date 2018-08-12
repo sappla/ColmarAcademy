@@ -851,6 +851,7 @@ i.transition {
 }
 a.major {
   text-decoration: none;
+  color: black;
 }
 a.major:visited {
   color: black;
