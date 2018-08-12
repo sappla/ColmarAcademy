@@ -1,36 +1,141 @@
-/* -- XXX -- */
-/* XXX */
-
-/* -- UNIVERSAL STYLES --      */
-/*  | Containers               */
-
-/* -- TYPOGRAPHY STYLES I --   */
-/*  | Promo                    */
-/*  | Sections                 */
-/*  | Informational            */
-/*  | Featured elements        */
-/*  | Catalogue tiles          */
-/*  | Exhibits description     */
-
-/* -- MARGINS & COLORS     --  */
-
-/* -- HEADER                -- */
-/*  | Desktop                  */
-/*  | Mobile                   */
+/* -- On-campus                     -- */
+/* -- fav-icon                     -- */
+/* -- quote font awesome                     -- */
+/* -- fav-icon                     -- */
+/* -- aria                     -- */
 
 
 
 
-/* -- UNIVERSAL STYLES -- */
+
+/* -- Colmar Academy, 2018                     -- */
+/* -- Codecademy's Build Websites from Scratch -- */
+/* -- Final Project                            -- */
+/* -- Author: Pasqualino Sollazzo              -- */
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - - TABLE OF CONTENT - - - - - -  */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
+/* -- UNIVERSAL STYLES --------------------- */
+/*  |                                        */
+/*  | Containers                             */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- TYPOGRAPHY STYLES -------------------- */
+/*  |                                        */
+/*  | Promo                                  */
+/*  | Sections                               */
+/*  | Informational                          */
+/*  | Featured elements                      */
+/*  | Catalogue tiles                        */
+/*  | Exhibits description                   */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- MAIN LAYOUT -------------------------- */
+/*  |                                        */
+/*  | Sticky header offset                   */
+/*  | Section colors                         */
+/*  | Basic elements                         */
+/*  | Media queries                          */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- FEATURED ELEMENTS -------------------- */
+/*  |                                        */
+/*  | Desktop                                */
+/*  | Responsive transition                  */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- BUTTONS ------------------------------ */
+/*  |                                        */
+/*  | Desktop                                */
+/*  | Responsive transition                  */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- HEADER ------------------------------- */
+/*  |                                        */
+/*  | Fixed header                           */
+/*  - | Logo                                 */
+/*    | Company name                         */
+/*    | Navigation - desktop                 */
+/*    | Navigation - mobile                  */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- BANNER ------------------------------- */
+/*  |                                        */
+/*  | Desktop                                */
+/*  | Responsive transition                  */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- INFORMATION -------------------------- */
+/*  |                                        */
+/*  | Desktop                                */
+/*  | Responsive transition                  */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- CATALOGUE ---------------------------- */
+/*  |                                        */
+/*  | Desktop                                */
+/*  | Mobile                                 */
+/*  | Tiles                                  */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- EXHIBITS ----------------------------- */
+/*  |                                        */
+/*  | Desktop                                */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- FOOTER ------------------------------- */
+/*  |                                        */
+/*  | Desktop                                */
+/*  - | Copyright                            */
+/*  - | Navigation                           */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* -- TITLE SECTION ------------------------ */
+/*  |                                        */
+/*  | Desktop                                */
+/*  - | Copyright                            */
+/*  - | Navigation                           */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- SIGN-IN PAGE ------------------------- */
+/*  |                                        */
+/*  | Desktop                                */
+/*  - | Forms                                */
+/*  - | Sign-in button                       */
+/*  | Mobile                                 */
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* -------------------|||------------------- */
+/* --------------------O-------------------- */
+
+
+
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - UNIVERSAL STYLES                */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
 html {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Cabin", sans-serif;
   font-size: 16px;
   color: black;
-
   background-color: whitesmoke;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -46,68 +151,139 @@ html {
     width: 100%;
   }
 }
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  .content-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .content-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+}
 
 .flex {
   display: flex;
 }
 
-.left-top {
+.left-top { /* Left column desktop & top mobile */
   flex-basis: 60%;
   max-width: 60%;
   padding: 2rem 1.5rem;
 }
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  .left-top {
+    display: block;
+    max-width: none;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .left-top {
+    display: block;
+    max-width: none;
+    width: 100%;
+    padding: 0;
+  }
+}
 
-.right-bottom {
+.right-bottom { /* Right column desktop & bottom mobile */
   flex-basis: 40%;
   max-width: 40%;
   padding: 2rem 1.5rem;
 }
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  .right-bottom {
+    display: block;
+    max-width: none;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .right-bottom {
+    display: block;
+    max-width: none;
+    width: 100%;
+    padding: 1rem;
+  }
+}
 
-.full {
+.full { /* Full width */
   flex-basis: 100%;
   max-width: 100%;
   padding: 2rem 1.5rem;
 }
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  .full {
+    display: block;
+    max-width: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .full {
+    display: block;
+    max-width: none;
+    width: 100%;
+    padding: 1rem;
+  }
+}
 
 .img-container {
   overflow: hidden;
-  background-color: color: rgb(120 120 120);
+  background-color: color: rgb(110 110 110);
 }
-
 .video-container {
   overflow: hidden;
   background-color: color: rgb(100 100 100);
 }
+.img-container img,
+.video-container video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
 
 
 
-/* -- TYPOGRAPHY STYLES -- */
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - TYPOGRAPHY STYLES               */
+/* ......................................... */
+/* ///////////////////////////////////////// */
 
 /* Promo */
 h1.promo-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 p.promo-copy {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Sections */
 h2.section-title {
-  font-size: 2.125rem;
-  font-weight: 900;
+  font-size: 2.25rem;
+  font-weight: 700;
   text-align: center;
 }
 
 /* Informational */
 h3.copy-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 p.copy {
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1.5rem;
   color: rgb(120 120 120);
 }
 aside.copy-author {
@@ -118,31 +294,31 @@ aside.copy-author {
 /* Featured elements */
 h4.feat-title {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 p.feat-subtitle {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   color: rgb(120 120 120);
 }
 a.feat-link {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
 }
 
 /* Catalogue tiles */
 h3.major-title {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 h4.major-subtitle {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 p.major-courses {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Exhibits description */
@@ -152,61 +328,20 @@ h3.description-title {
 }
 p.description {
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1.5rem;
   color: rgb(120 120 120);
 }
 
 
 
-/* -- MARGINS --  */
-.copy-block,
-.description-block {
-  margin-top: 2rem;
-}
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - MAIN LAYOUT                     */
+/* ......................................... */
+/* ///////////////////////////////////////// */
 
-.copy-title,
-.copy,
-.description-title,
-.description,
-.feat-title,
-.feat-subtitle {
-  margin-bottom: 1rem;
-}
-
-
-
-
-
-
-
-
-
-
-.img-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  vertical-align: middle;
-}
-
-
-
-.video-container video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  vertical-align: middle;
-}
-
-
-
-.video-err-msg {
-  content: "";
-  background-color: red;
-
-}
-
-
+/* Sticky header positioning */
 .banner-section,
 .information-section,
 .catalogue-section,
@@ -216,29 +351,190 @@ p.description {
   top: 4rem; /* Offset sections to account for fixed header */
 }
 
+/* Section colors */
 .banner-section,
 .catalogue-section {
   background-color: rgb(235 235 235);
 }
 
-
-
-
-
-/*
-.XXXXsection-title {
-  font-size: 2rem;
-  font-weight: 700;
+/* Basic elements */
+.copy-block,
+.description-block {
+  margin-top: 2rem;
+}
+.copy-title,
+.copy,
+.description-title,
+.description,
+.feat-title,
+.feat-subtitle {
   margin-bottom: 1rem;
 }
-*/
 .section-title {
-
-
   padding-top: 2rem;
 }
 
+/* Media queries */
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  .information-container,
+  .showcase-container {
+    display: block;
+  }
 
+  .information-section .right-bottom,
+  .exhibit-section {
+    background-color: rgb(235 235 235);
+  }
+  .catalogue-section {
+    background-color: inherit;
+  }
+  .exhibit-section .right-bottom {
+    background-color: whitesmoke;
+  }
+
+
+
+
+
+}
+@media only screen and (max-width: 640px) {
+  .banner-container,
+  .information-container,
+  .catalogue-container,
+  .showcase-container {
+    display: block;
+  }
+}
+
+
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - FEATURED ELEMENTS               */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
+/* Desktop */
+.feat-container {
+  flex-direction: column;
+}
+.feat {
+  display: flex;
+  align-items: center;
+}
+.feat:first-of-type {
+  padding-top: 0;
+}
+.feat .img-container {
+  width: 35%;
+}
+.feat-info {
+  width: 65%;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+a.feat-link {
+  text-decoration: none;
+  color: rgb(38 121 232);
+}
+a.feat-link:hover {
+  color: rgb(32 100 191);
+}
+.feat-wrapper::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.25rem;
+  border-radius: 0.125rem;
+  margin: 0.5rem auto 1rem 0;
+  background-color: rgb(120 120 120);
+  transition: width 300ms ease-in 0s;
+}
+.feat-wrapper:hover::after {
+  width: 100%;
+  background-color: black;
+  transition: all 300ms ease-out 0s;
+}
+.feat:hover {
+  background-color: rgb(235 235 235);
+  border-radius: 0 0.75rem 0.75rem 0;
+  transition: width 200ms ease-out 100ms,
+    border-radius 300ms ease-out 0s;
+}
+
+/* Responsive transition */
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  .feat-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .feat {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .feat-wrapper {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .feat-wrapper::after {
+    content: "";
+    display: none;
+  }
+  .feat:hover {
+    background-color: inherit;
+    border-radius: 0;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 640px) {
+  .feat {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+  .feat:hover {
+    border-radius: 0  0 0.75rem 0.75rem;
+  }
+  .feat-info {
+    width: 100%;
+    padding: 1rem;
+  }
+  .feat .img-container {
+    width: 100%;
+    height: 40vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .feat .img-container img {
+    display: none;
+  }
+  #orientation .img-container {
+    background-image: url("../assets/images/information-orientation-mobile.jpg");
+  }
+  #campus .img-container {
+    background-image: url("../assets/images/information-campus-mobile.jpg");
+  }
+  #guest-lecture .img-container {
+    background-image: url("../assets/images/information-guest-lecture-mobile.jpg");
+  }
+  .feat-wrapper::after {
+    content: "";
+    display: none;
+  }
+}
+
+
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - BUTTONS                         */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
+/* Desktop */
 .cta-btn {
   font-size: 1.125rem;
   text-decoration: none;
@@ -248,7 +544,6 @@ p.description {
   padding: 1rem;
   width: 100%;
   text-align: center;
-
   box-shadow: 0 1.5px 1.5px 0 rgba(0,0,0,0.16),
     0 0 0 1px rgba(0,0,0,0.08);
   transition: box-shadow 200ms cubic-bezier(0.4,0.0,0.2,1);
@@ -257,6 +552,35 @@ a.cta-btn:hover {
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),
     0 0 0 1px rgba(0,0,0,0.08);
 }
+
+#catalogue-btn {
+  justify-content: center;
+  margin: 1rem auto;
+}
+#catalogue-btn a {
+  text-decoration: none;
+  text-align: center;
+  width: calc(40% - 3rem); /* To keep same responsive size as other buttons */
+}
+
+/* Responsive transition */
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  #events-btn {
+    width: calc(50% - 6rem); /* To keep same responsive size as other buttons */
+    margin: auto 3rem;
+    height: 3.125rem;
+    align-self: center;
+  }
+  #exhibit-btn {
+    width: calc(50% - 6rem); /* To keep same responsive size as other buttons */
+    margin: 1rem calc(25% + 3rem) 1rem auto;
+    height: 3.125rem;
+    align-self: center;
+
+  }
+}
+
+/* Mobile */
 @media only screen and (max-width: 640px) {
   #events-btn.cta-btn,
   #catalogue-btn .cta-btn,
@@ -277,74 +601,20 @@ a.cta-btn:hover {
   #exhibit-btn.cta-btn:active {
     color: rgb(32 100 191);
   }
+  #catalogue-btn a {
+    width: 100%;
+  }
 }
 
 
 
-.feat-container {
-  flex-direction: column;
-}
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - HEADER                          */
+/* ......................................... */
+/* ///////////////////////////////////////// */
 
-.feat {
-  display: flex;
-  align-items: center;
-}
-
-.feat:first-of-type {
-  padding-top: 0;
-}
-
-.feat .img-container {
-  width: 35%;
-}
-
-.feat-info {
-  width: 65%;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
-}
-
-
-
-a.feat-link {
-  text-decoration: none;
-
-  color: rgb(38 121 232);
-}
-
-a.feat-link:hover {
-  color: rgb(32 100 191);
-}
-
-.feat-wrapper::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0.25rem;
-  border-radius: 0.125rem;
-  margin: 0.5rem auto 1rem 0;
-  background-color: rgb(120 120 120);
-  transition: width 300ms ease-in 0s;
-}
-
-.feat-wrapper:hover::after {
-  width: 100%;
-  background-color: black;
-  transition: all 300ms ease-out 0s;
-}
-
-.feat:hover {
-  background-color: rgb(235 235 235);
-  border-radius: 0 0.75rem 0.75rem 0;
-  transition: width 200ms ease-out 100ms,
-    border-radius 300ms ease-out 0s;
-}
-
-
-
-
-
-/* -- HEADER -- */
+/* Fixed header */
 .header-section {
   position: fixed;
   width: 100%;
@@ -355,7 +625,6 @@ a.feat-link:hover {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),
     0 0 0 1px rgba(0,0,0,0.08);
 }
-
 .header-section div.content-wrapper.flex {
   justify-content: space-between;
   align-items: center;
@@ -363,16 +632,14 @@ a.feat-link:hover {
   padding: 0 1.5rem;
 }
 
-/* Desktop */
+/* > Logo */
 .logo-desktop {
   padding-right: 2.5rem;
   flex-grow: 1;
 }
-
 .logo-desktop a {
   color: inherit;
 }
-
 .logo-desktop .img-container {
   min-width: 1.6875rem;
   min-height: 2rem;
@@ -380,6 +647,7 @@ a.feat-link:hover {
   vertical-align: middle;
 }
 
+/* > Company name */
 .brand-name {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
@@ -389,7 +657,6 @@ a.feat-link:hover {
   vertical-align: middle;
   text-align: center;
 }
-
 .brand-name span {
   font-weight: 700;
 }
@@ -399,14 +666,11 @@ a.feat-link:hover {
   }
 }
 
-.nav-desktop {
-  height: inherit;
-}
-
+/* > Navigation - desktop */
+.nav-desktop,
 .nav-desktop ul {
   height: inherit;
 }
-
 .nav-desktop ul li {
   display: inline-block;
   margin-top: 0.25rem;
@@ -414,11 +678,13 @@ a.feat-link:hover {
   text-transform: capitalize;
   white-space: nowrap;
 }
-
+.nav-desktop ul li a {
+  text-decoration: none;
+  color: rgb(120 120 120);
+}
 .nav-desktop ul li a:hover {
   color: black;
 }
-
 .nav-desktop-btn::after {
     content: '';
     display: block;
@@ -431,21 +697,16 @@ a.feat-link:hover {
     background-color: black;
     transition: width 200ms ease-in 25ms;
 }
-
 .nav-desktop-btn:hover::after {
     width: calc(100% + 1.5rem);
-    /transition: width 200ms ease-in 25ms;
+    transition: width 200ms ease-in 25ms;
 }
 
-.nav-desktop ul li a {
-  text-decoration: none;
-  color: rgb(120 120 120);
-}
-
-/* Mobile */
 .nav-mobile {
   display: none;
 }
+
+/* > Navigation - mobile */
 @media only screen and (max-width: 640px) {
   .nav-desktop,
   .logo-desktop {
@@ -464,213 +725,50 @@ a.feat-link:hover {
 }
 
 
-/* -- BANNER -- */
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - BANNER                          */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
+/* -- Desktop -- */
 .banner-container {
   align-items: center;
 }
-
 #banner-img {
   max-height: 100%;
   width: auto;
 }
-
 .banner-cta {
   margin: 1rem 0;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
 }
-
 .banner-cta h1 {
   margin-bottom: 2rem;
 }
 .banner-cta p {
   margin-bottom: 3rem;
 }
-
-h1.promo-title-mobile {
-  display: none;
-}
+h1.promo-title-mobile,
 p.promo-copy-mobile {
   display: none;
 }
 
+/* -- Responsive transition -- */
 @media only screen and (min-width: 641px) and (max-width: 940px) {
-
-  .content-wrapper {
-    width: 100%;
-    padding: 0;
-  }
-
-
-  .information-container,
-  .showcase-container {
-    display: block;
-  }
-
-  #motivational-section.left-top {
-
-    max-width: none;
-    width: 100%;
-  }
-  #motivational-section.left-top .img-container {
-    display: none;
-
-  }
-  #motivational-section.left-top .copy-block {
-    flex-basis: 100%;
-    max-width: 100%;
-    text-align: center;
-    margin: 0 2rem;
-  }
-  #motivational-section.left-top .copy-block::before,
-  #motivational-section.left-top .copy-block::after {
-    content: "quote fa";
-    color: green;
-  }
-  #motivational-section.left-top .copy-title {
-    padding-top: 0.75rem;
-  }
-  #motivational-section.left-top .copy-author {
-    padding-bottom: 0.75rem;
-  }
-
-  .information-section .right-bottom {
-    background-color: rgb(235 235 235);
-    display: block;
-    max-width: none;
-    width: 100%;
-  }
-  .feat-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .feat {
-    margin-bottom: 1rem;
-  }
-  .feat .img-container {
-    /height: 20vw;
-  }
-  .feat-wrapper {
-    flex-basis: 50%;
-    max-width: 50%;
-  }
-  .feat-wrapper::after {
-    content: "";
-    display: none;
-  }
-  .feat:hover {
-    background-color: inherit;
-    border-radius: 0;
-  }
-  #events-btn {
-    width: calc(50% - 6rem); /* To keep same responsive size as other buttons */
-    margin: auto 3rem;
-    height: 3.125rem;
-    align-self: center;
-  }
-  .catalogue-section {
-    background-color: whitesmoke;
-  }
-  .catalogue-container .tile-wrapper {
-    flex-basis: 25%;
-    min-width: 40%;
-  }
-
-
-
-  .exhibit-section {
-    background-color: rgb(235 235 235);
-  }
-  .showcase-container .left-top {
-    display: flex;
-    flex-direction: column;
-    max-width: none;
-    width: 100%;
-    padding-bottom: 1rem;
-  }
-  .showcase-container .right-bottom {
-    display: block;
-    max-width: none;
-    width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  #exhibit-btn {
-    width: calc(50% - 6rem); /* To keep same responsive size as other buttons */
-    margin: 1rem calc(25% + 3rem) 1rem auto;
-    height: 3.125rem;
-    align-self: center;
-
-  }
-
-
-
-
-
-
-  .full {
-    display: block;
-    max-width: none;
-    width: 100%;
-  }
-
   .banner-cta h1 {
     font-size: 4.1vw;
   }
-
   .banner-cta p {
     font-size: 2.5vw;
   }
-
-  .header-section {
-    background-color: yellow;
-  }
-
-
-
-
-
-
 }
 
+/* -- Mobile -- */
 @media only screen and (max-width: 640px) {
-  .content-wrapper {
-    width: 100%;
-    padding: 0;
-  }
-
-
-  .banner-container,
-  .information-container,
-  .catalogue-container,
-  .showcase-container {
-    display: block;
-  }
-
-  .left-top {
-    display: block;
-    max-width: none;
-    width: 100%;
-    padding: 0;
-  }
-  .right-bottom {
-    display: block;
-    max-width: none;
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .full {
-    display: block;
-    max-width: none;
-    width: 100%;
-    padding: 1rem;
-  }
-
-
-
   h1.promo-title {
     display: none;
   }
@@ -689,188 +787,172 @@ p.promo-copy-mobile {
     font-weight: 400;
     text-align: center;
   }
-
 }
 
 
 
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - INFORMATION                     */
+/* ......................................... */
+/* ///////////////////////////////////////// */
 
-
-/* -- INFORMATION -- */
-.information-container {
-  align-items: flex-start;
-}
-
+/* Desktop */
 #info-img {
   max-height: 100%;
   width: auto;
 }
 
+/* Responsive transition */
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  #motivational-section.left-top .img-container {
+    display: none;
+  }
+  .copy-block {
+    flex-basis: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 2rem;
+  }
+  .copy-title {
+    padding-top: 0.75rem;
+  }
+  .copy-author {
+    padding-bottom: 0.75rem;
+  }
+
+
+
+  #motivational-section.left-top .copy-block::before,
+  #motivational-section.left-top .copy-block::after {
+    content: "quote fa";
+    color: green;
+  }
+
+
+
+}
+
+/* Mobile */
 @media only screen and (max-width: 640px) {
   #motivational-section {
     display: none;
   }
-
-  .feat {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 1rem;
-  }
-
-  .feat:hover {
-    border-radius: 0  0 0.75rem 0.75rem;
-  }
-
-  .feat .img-container {
-    width: 100%;
-    height: 40vw;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .feat .img-container img {
-    display: none;
-  }
-  #orientation .img-container {
-    background-image: url("../assets/images/information-orientation-mobile.jpg");
-  }
-  #campus .img-container {
-    background-image: url("../assets/images/information-campus-mobile.jpg");
-  }
-  #guest-lecture .img-container {
-    background-image: url("../assets/images/information-guest-lecture-mobile.jpg");
-  }
-
-  .feat-info {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .feat-wrapper::after {
-    content: "";
-    display: none;
-  }
-
-
-
 }
 
 
-/* -- CATALOGUE -- */
-.catalogue-section .full {
-  padding: 1rem 1.5rem;
-}
 
-.catalogue-section .tile-wrapper {
-  padding-bottom: 1rem;
-}
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - CATALOGUE                       */
+/* ......................................... */
+/* ///////////////////////////////////////// */
 
+/* Desktop */
 .catalogue-container {
   padding: 0 1.5rem;
   justify-content: space-around;
   justify-content: center;
   flex-wrap: wrap;
 }
-
-.tile-wrapper {
-  background-color: white;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),
-    0 0 0 1px rgba(0,0,0,0.08);
-}
-
-.catalogue-container .tile-wrapper {
-  flex-basis: 25%;
-  max-width: 25%;
-  margin: 1rem 0.75rem;
-  transition: all 250ms ease-in-out 0ms;
-}
-
-.catalogue-container .tile-wrapper:hover {
-  border-radius: 0.75rem;
-  transform: translateY(-0.5rem);
-  transition: all 250ms ease-in-out 100ms;
-  box-shadow: 0px 3px 25px 3px rgba(0,0,0,0.2);
-}
-
-a.major {
-  text-decoration: none;
-}
-
-a.major:visited {
-  color: black;
+.catalogue-section .full {
+  padding: 1rem 1.5rem;
 }
 
 .major {
   border-radius: 0.5rem;
 }
-
-.major .img-container {
-  width: 100%;
+a.major {
+  text-decoration: none;
 }
+a.major:visited {
+  color: black;
+}
+/* Question: Sometimes I still have the viseted links to
+appear blue. Upon inspection it looks like it is webkit user agent.
+What is the way to fix it? */
 
 .major-info {
   padding: 1.5rem;
 }
-
 .major-title {
-
   margin-bottom: 1rem;
 }
-
 .major-subtitle {
   text-transform: uppercase;
-
-  color: rgb(120 120 120);
   margin-bottom: 0.5rem;
 }
-
+.major-subtitle,
 .major-courses {
-
   color: rgb(120 120 120);
 }
 
-#catalogue-btn {
-  justify-content: center;
-  margin: 1rem auto;
-}
-
-#catalogue-btn a {
-  text-decoration: none;
-  text-align: center;
-  width: calc(40% - 3rem); /* To keep same responsive size as other buttons */
-}
-
+/* Mobile */
 @media only screen and (max-width: 640px) {
-
-  .catalogue-section .full {
-    padding: 1rem;
-  }
-
-  .major .img-container {
-    display: none;
-  }
-
-  .catalogue-container .tile-wrapper {
-    flex-basis: 100%;
-    max-width: none;
-
-  }
-
   .catalogue-container {
     padding: 0 1rem;
     flex-direction: column;
     flex-wrap: nowrap;
   }
-
-  #catalogue-btn a {
-    width: 100%;
+  .catalogue-section .full {
+    padding: 1rem;
+  }
+  .major .img-container {
+    display: none;
   }
 }
 
-/* -- EXHIBIT -- */
+/* Tiles */
+.tile-wrapper {
+  background-color: white;
+  flex-basis: 25%;
+  max-width: 25%;
+  margin: 1rem 0.75rem 1.5rem 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),
+    0 0 0 1px rgba(0,0,0,0.08);
+  transition: all 250ms ease-in-out 0ms;
+}
+.tile-wrapper:hover {
+  border-radius: 0.75rem;
+  transform: translateY(-0.5rem);
+  transition: all 250ms ease-in-out 100ms;
+  box-shadow: 0px 3px 25px 3px rgba(0,0,0,0.2);
+}
+@media only screen and (min-width: 641px) and (max-width: 940px) {
+  .catalogue-container .tile-wrapper {
+    flex-basis: 25%;
+    min-width: 40%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .tile-wrapper {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
 
+
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - EXHIBITS                        */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
+/* Desktop */
+.video-err-msg {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(120 120 120);
+  text-align: center;
+}
+/* Question: How do you test a video that is not supported?
+I'd like to see how the error message displays when
+the video is not supported */
+
+/* Mobile */
 @media only screen and (max-width: 640px) {
   .description-block,
   #fisma,
@@ -883,40 +965,46 @@ a.major:visited {
 }
 
 
-/* -- FOOTER -- */
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - FOOTER                          */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
+/* Desktop */
 .footer-section {
   border-top: 1px solid rgb(140 140 140);
 }
-
 .footer-section .full {
   padding-top: 1rem;
   padding-bottom: 3rem;
 }
-
 .footer-container {
   font-size: 0.875rem;
   color: rgb(140 140 140);
   justify-content: space-between;
 }
 
+/* > Copyright */
 .copyright-info {
   flex-grow: 1;
 }
 
+/* > Navigation */
 .nav-footer ul li {
   display: inline-block;
   padding: 0 0.25rem;
 }
-
 .nav-footer ul li:last-child {
   padding-right: 0;
 }
-
 a.nav-footer-btn {
   text-decoration: none;
   color: inherit;
 }
 
+/* Mobile */
 @media only screen and (max-width: 640px) {
   .footer-section {
     border-top: none;
@@ -929,16 +1017,21 @@ a.nav-footer-btn {
   }
 }
 
-/* -- TITLE SECTION -- */
+
+
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - TITLE SECTION                   */
+/* ......................................... */
+/* ///////////////////////////////////////// */
+
 .title-section {
   position: relative;
   top: 4rem; /* Offset sections to account for fixed header */
 }
-
 .title-container {
   padding: 3rem;
 }
-
 .title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -947,8 +1040,13 @@ a.nav-footer-btn {
 
 
 
-/* -- SIGN-IN -- */
+/* ///////////////////////////////////////// */
+/* ''''''''''''''''''''''''''''''''''''''''' */
+/* - - - - - SIGN-IN PAGE                    */
+/* ......................................... */
+/* ///////////////////////////////////////// */
 
+/* Desktop */
 .signin-section {
   position: relative;
   top: 4rem; /* Offset sections to account for fixed header */
@@ -958,7 +1056,6 @@ a.nav-footer-btn {
   align-items: center;
   padding: 3rem 20%;
 }
-
 .sign-in {
   flex-direction: column;
   align-items: center;
@@ -967,18 +1064,15 @@ a.nav-footer-btn {
   border-radius: 1rem;
   padding: 3rem 0;
 }
-
 .signin-title {
   border-bottom: 1px solid black;
   margin-bottom: 3rem;
 }
-
 .signin-title,
 .forms-container {
   flex-direction: column;
   align-items: center;
   min-width: 90%;
-
 }
 .signin-title .img-container {
   padding: 1rem;
@@ -988,29 +1082,27 @@ a.nav-footer-btn {
   margin-bottom: 2rem;
 }
 
+/* Forms */
 .username-container,
 .password-container {
   margin-bottom: 2rem;
   min-width: 60%;
 }
-
 .username-form,
 .password-form {
   background-color: white;
   padding: 1.125rem;
   width: 100%;
   text-align: center;
-
   box-shadow: 0 1.5px 1.5px 0 rgba(0,0,0,0.16),
     0 0 0 1px rgba(0,0,0,0.08);
 }
-
 .username-container p,
 .password-container p {
   margin-bottom: 0.5rem;
 }
 
-
+/* Sign-in button */
 .signin-btn {
   font-size: 1.125rem;
   background-color: yellow;
@@ -1018,7 +1110,6 @@ a.nav-footer-btn {
   width: 30%;
   text-align: center;
   border-radius: 3rem;
-
   box-shadow: 0 1.5px 1.5px 0 rgba(0,0,0,0.16),
     0 0 0 1px rgba(0,0,0,0.08);
   transition: box-shadow 200ms cubic-bezier(0.4,0.0,0.2,1);
@@ -1026,4 +1117,23 @@ a.nav-footer-btn {
 .signin-btn:hover {
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),
     0 0 0 1px rgba(0,0,0,0.08);
+}
+
+/* Mobile */
+@media only screen and (max-width: 640px) {
+  .signin-container {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+  .signin-title,
+  .forms-container {
+    min-width: 90%;
+  }
+  .username-container,
+  .password-container {
+    width: 90%;
+  }
+  .signin-btn {
+    width: 80%;
+  }
 }
