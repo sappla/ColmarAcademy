@@ -1,8 +1,3 @@
-/* -- aria                     -- */
-
-
-
-
 
 /* -- Colmar Academy, 2018                     -- */
 /* -- Codecademy's Build Websites from Scratch -- */
@@ -231,7 +226,6 @@ html {
 
 .img-container {
   overflow: hidden;
-  background-color: rgb(110, 110, 110);
 }
 .video-container {
   overflow: hidden;
